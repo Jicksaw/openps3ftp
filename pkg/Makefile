@@ -16,7 +16,7 @@ PKG_VER				?= 01.00
 ifneq ($(CELL_SDK),)
 MAKE_PKG			:= psn_package_npdrm.exe
 else
-MAKE_PKG			:= $(PKG) --contentid $(3) $(1) $(2)
+MAKE_PKG			?= $(PKG) --contentid $(3) $(1) $(2)
 endif
 
 all: $(CONTENT_ID).pkg
